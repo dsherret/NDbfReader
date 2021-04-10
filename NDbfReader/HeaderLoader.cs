@@ -174,6 +174,9 @@ namespace NDbfReader
                 case NativeColumnType.Float:
                     return new DecimalColumn(name, columnOffset, size);
 
+                case NativeColumnType.Currency:
+                    return new CurrencyColumn(name, columnOffset, size);
+
                 default:
                     return new RawColumn(name, columnOffset, size, type);
             }
